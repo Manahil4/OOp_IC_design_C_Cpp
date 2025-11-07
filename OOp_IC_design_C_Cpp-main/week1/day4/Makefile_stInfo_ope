@@ -1,0 +1,19 @@
+ope: math_oper.cpp
+	g++ math_oper.cpp -o ope
+stinfo: main.cpp
+	g++ main.cpp -o stinfo
+all: ope stinfo
+
+clean1:
+	rm -f ope
+clean2:
+	rm -f stinfo
+clean:
+	clean1 clean2
+run1:ope
+	./ope
+run2:stinfo
+	./stinfo
+.PHONY: all clean clean1 clean2 run1 run2
+ 
+
