@@ -1,0 +1,12 @@
+        
+
+
+
+main_f: mathlib.o main.o           # Fixed order
+	g++ main.o mathlib.o -o main_f  # Fixed order
+        
+mathlib.o: mathlib.cpp mathlib.h
+	g++ -c mathlib.cpp -o mathlib.o  # Added -o flag
+
+main.o: main_fri.cpp 
+	g++ -c main_fri.cpp -o main.o       # Fixed output name
